@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+  
+        <div class="box">
+        <h1>Task Manager</h1>
+        </div>
+      
+        <div class="main">
+          <div class="addtasks">
+          <h2>Add Task</h2>
+            <hr>
+          </div>
+          <form action="/send" method="post">
+            <input type="text" name="Reminder">
+            <input type="time" name="time" id="">
+            <button type="Submit">Submit</button>
+        </form>
+              <div class="addedtasks">
+                  <h2>Current Tasks</h2>
+                  <hr>
+                  <ul id="taskincomplete">
+
+                    <% for(let i of data){ %>
+                       <span> <li><%= i.name_db %></li><a href = "/delete/<%=i._id%>" style ="margin-right: 20px;">Delete</a><a href = "/update/<%=i._id%>">Edit</a> </span>
+                    <% } %>
+                    
+                  </ul>
+              </div>
+          
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="wrapper">
+  
+      <div class="box">
+      <h1>Task Manager</h1>
+      </div>
+    
+      <div class="main">
+        <div class="addtasks">
+        <h2>Add Task</h2>
+          <hr>
+        </div>
+        <form>
+          
+          <input type="text" id="tasktext" name="tasktext" placeholder="E.g: grab half a dozen eggs">
+          
+        </form>
+    
+        
+        
+            <div class="addedtasks">
+                <h2>Current Tasks</h2>
+                <hr>
+                <ul id="taskincomplete">
+                  <li><input type="checkbox"><label></label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
+                </ul>
+            </div>
+        
+            
+        
+      </div>
+      
+    </div>
+  </body>
+</html>
